@@ -8,3 +8,12 @@ macros:
       - name: decimals
         type: integer
         description: number of decimal places, defaults to 2
+  - name: grant_select
+    description: A macro that grants select privileges on target.schema to target.role unless otherwise specified
+    arguments:
+      - name: schema
+        type: string
+        description: schema that we want to grant privileges to, by default is target.schema
+      - name: role
+        type: string
+        description: role that we want to grant privileges to, by default is target.role
